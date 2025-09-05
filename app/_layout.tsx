@@ -7,11 +7,10 @@ import 'react-native-reanimated'
 
 import { QueryClientProvider } from '@tanstack/react-query'
 
-import { UserContext, UserProvider } from '@/context/AuthContext'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
 import { fonts } from '@/assets/fonts/fonts'
-import { Loading } from '@/components'
+
 import { QueryClient } from '@tanstack/react-query'
 
 import { router, Stack, usePathname } from 'expo-router'
@@ -24,30 +23,9 @@ SplashScreen.preventAutoHideAsync()
 LogBox.ignoreLogs(['[Reanimated] Reading from `value` during component render'])
 
 function LayoutContent() {
-    const { user, loading } = useContext(UserContext)
-    const pathname = usePathname()
     useEffect(() => {
-        if (!loading) {
-            if (!user) {
-                console.log('Redirect to login')
-                router.replace('/auth/StartScreen')
-            }
-            // Nếu user đã login rồi mà đang ở /auth/login thì tự move qua /feed
-            else if (pathname.startsWith('/auth')) {
-                console.log('Redirect to /feed')
-                router.replace('/(tabs)/feed')
-            }
-        }
-    }, [user, loading])
-
-    if (loading) {
-        return (
-            <View className="items-center justify-center flex-1 bg-white">
-                <Loading />
-            </View>
-        )
-    }
-
+        router.replace('/(tabs)/home1')
+    }, [])
     return (
         <SafeAreaProvider>
             <Stack>
@@ -88,10 +66,8 @@ export default function RootLayout() {
     return (
         <QueryClientProvider client={queryClient}>
             <GestureHandlerRootView className="flex-1">
-                <UserProvider>
-                    <LayoutContent />
-                    <Toast position="top" />
-                </UserProvider>
+                <LayoutContent />
+                <Toast position="top" />
             </GestureHandlerRootView>
         </QueryClientProvider>
     )

@@ -31,49 +31,20 @@ export default function TabsLayout() {
                 }}
             >
                 <Tabs.Screen
-                    name="feed"
+                    name="home1"
                     options={{
-                        title: 'Feed',
+                        title: 'Home 1',
                         tabBarIcon: ({ color, size, focused }) => (
                             <Ionicons name={focused ? 'home' : 'home-outline'} size={size} color={color} />
                         ),
                     }}
                 />
                 <Tabs.Screen
-                    name="suggest"
+                    name="home2"
                     options={{
-                        title: 'Suggest',
+                        title: 'Home 2',
                         tabBarIcon: ({ color, size, focused }) => (
-                            <Ionicons name={focused ? 'search' : 'search-outline'} size={size} color={color} />
-                        ),
-                    }}
-                />
-                <Tabs.Screen
-                    name="camera"
-                    options={{
-                        title: '',
-                        tabBarIcon: ({ focused }) => (
-                            <View className="w-[52px] h-[47px] left-0 bg-sky-900 rounded-[22px] flex-row items-center justify-center">
-                                <Ionicons name={focused ? 'camera' : 'camera-outline'} size={32} color="#FFFFFF" />
-                            </View>
-                        ),
-                    }}
-                />
-                <Tabs.Screen
-                    name="challenge"
-                    options={{
-                        title: 'Challenge',
-                        tabBarIcon: ({ color, size, focused }) => (
-                            <Ionicons name={focused ? 'trophy' : 'trophy-outline'} size={size} color={color} />
-                        ),
-                    }}
-                />
-                <Tabs.Screen
-                    name="profile"
-                    options={{
-                        title: 'Profile',
-                        tabBarIcon: ({ color, size, focused }) => (
-                            <Ionicons name={focused ? 'person' : 'person-outline'} size={size} color={color} />
+                            <Ionicons name={focused ? 'home' : 'home-outline'} size={size} color={color} />
                         ),
                     }}
                 />
