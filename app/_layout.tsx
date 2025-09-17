@@ -24,7 +24,7 @@ LogBox.ignoreLogs(['[Reanimated] Reading from `value` during component render'])
 
 function LayoutContent() {
     useEffect(() => {
-        router.replace('/(tabs)/home1')
+        router.replace('/(tabs)/HomeScreen')
     }, [])
     return (
         <SafeAreaProvider>
