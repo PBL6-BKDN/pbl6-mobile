@@ -1,68 +1,72 @@
 {
-    "expo": {
-        "name": "spoter",
-        "slug": "spoter",
-        "version": "1.0.0",
-        "orientation": "portrait",
-        "icon": "./assets/images/logo-icon.png",
-        "scheme": "myapp",
-        "userInterfaceStyle": "automatic",
-        "newArchEnabled": true,
-        "ios": {
-            "supportsTablet": true,
-            "bundleIdentifier": "com.nguyenhuynh2412.spoter"
-        },
-        "android": {
-            "adaptiveIcon": {
-                "foregroundImage": "./assets/images/logo-icon.png",
-                "backgroundColor": "#ffffff"
-            },
-            "permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
-            "package": "com.nguyenhuynh2412.spoter"
-        },
-        "web": {
-            "bundler": "metro",
-            "output": "static",
-            "favicon": "./assets/images/logo-big.png"
-        },
-        "experiments": {
-            "typedRoutes": true
-        },
-        "plugins": [
-            [
-                "expo-build-properties",
-                {
-                    "android": {
-                        "usesCleartextTraffic": true
-                    }
-                }
-            ],
-            [
-                "expo-location",
-                {
-                    "locationWhenInUsePermission": "Show current location on map."
-                }
-            ],
-            "expo-router",
-            [
-                "expo-splash-screen",
-                {
-                    "image": "./assets/images/loading-splash.png",
-                    "imageWidth": 200,
-                    "resizeMode": "contain",
-                    "backgroundColor": "#ffffff"
-                }
-            ],
-            "expo-dev-client",
-            "expo-build-properties"
-        ],
-        "extra": {
-            "router": {
-                "origin": false
-            },
-            "eas": {
-                "projectId": "a76cf63a-9857-44ba-8815-c996a331867f"
-            }
+  "expo": {
+    "name": "spoter",
+    "slug": "spoter",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo-icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nguyenhuynh2412.spoter"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/logo-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "package": "com.nguyenhuynh2412.spoter"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/logo-big.png"
+    },
+    "experiments": {
+      "typedRoutes": true
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
         }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Show current location on map."
+        }
+      ],
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/loading-splash.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      "expo-dev-client",
+      "expo-build-properties",
+      "expo-font"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "a76cf63a-9857-44ba-8815-c996a331867f"
+      }
     }
+  }
 }
